@@ -53,6 +53,9 @@ dd a {
 }
 
 @media screen and (max-width: 768px) {
+    body{
+        min-width: 235px;
+    }
     .profile-area {
         max-width: 280px;
     }
