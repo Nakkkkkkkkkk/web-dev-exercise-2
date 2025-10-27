@@ -36,3 +36,17 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #f1f7ff;
 }
+
+@media screen and (max-width: 768px) {
+    .table-area {
+        overflow-x: scroll;
+        max-height: 500px;
+
+    }
+
+    thead {
+        position: sticky;
+        top: 0;
+    }
+
+}

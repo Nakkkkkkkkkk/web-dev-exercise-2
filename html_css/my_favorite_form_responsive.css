@@ -1,40 +1,48 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+
+body {
     background-color: rgb(178, 221, 239);
     margin: 0;
     padding: 20px;
 }
-.container{
+
+.container {
     max-width: 500px;
     margin: 0 auto;
 }
-h1{
+
+h1 {
     text-align: center;
     padding: 20px;
     color: rgb(113, 140, 231);
 }
-.card{
+
+.card {
     background-color: aliceblue;
     box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
 }
-.form-row{
+
+.form-row {
     margin-top: 10px;
 }
-.form-row .hint{
+
+.form-row .hint {
     color: gray;
     font-weight: 100px;
 }
-button.clear{
-background-color: rgb(255, 255, 255);
+
+button.clear {
+    background-color: rgb(255, 255, 255);
 }
-button{
+
+button {
     width: 55px;
     height: 35px;
     border-radius: 30px;
@@ -42,40 +50,76 @@ button{
     border: 1px solid rgb(207, 201, 201);
     cursor: pointer;
 }
-.form-row{
+
+.form-row {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.actions{
+
+.actions {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
 }
-input, textarea, select, fieldset{
+
+input,
+textarea,
+select,
+fieldset {
     border-radius: 10px;
     padding: 10px;
     background-color: #fff;
     border: 1px solid rgb(207, 201, 201);
 }
-.radios{
+
+.radios {
     gap: 10px;
     display: flex;
 }
-label,small{
+
+label,
+small {
     margin-left: 10px;
 }
-button:hover{
+
+button:hover {
     transform: scale(1.1);
     color: #fff;
 }
-button.clear:hover{
+
+button.clear:hover {
     color: grey;
     background-color: #fff;
 }
-select{
+
+select {
     cursor: pointer;
 }
-input:focus,select:focus,textarea:focus{
+
+input:focus,
+select:focus,
+textarea:focus {
     outline: 2px solid yellowgreen;
+}
+
+select,
+::picker(select) {
+    appearance: base-select;
+}
+
+option:hover,
+option:focus-visible {
+    background-color: aquamarine;
+    outline: none;
+}
+
+input[type="radio"] {
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        margin-top: -15px;
+    }
 }
