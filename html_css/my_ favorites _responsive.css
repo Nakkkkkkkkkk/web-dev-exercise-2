@@ -41,12 +41,10 @@ tbody tr:hover {
     .table-area {
         overflow-x: scroll;
         max-height: 500px;
-
     }
 
     thead {
         position: sticky;
         top: 0;
     }
-
 }

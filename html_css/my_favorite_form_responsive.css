@@ -110,7 +110,7 @@ select,
 
 option:hover,
 option:focus-visible {
-    background-color: aquamarine;
+    background-color:rgb(178, 221, 239);
     outline: none;
 }
 
@@ -121,6 +121,7 @@ input[type="radio"] {
 @media screen and (max-width: 768px) {
     .container{
         min-width: 250px;
+        max-width: 380px;
         margin-top: -15px;
     }
 }
