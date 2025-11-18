@@ -36,10 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (value === "") {
             dateError.textContent = "Start Date is required.";
         }
+        else {
+            dateError.textContent = "";
+            return true;
+        }
     }
 
     function validateGenre() {
-        if (genreSelect.value === "" || genreSelect.value === null) {
+        if (genreSelect.value === "") {
             genreError.textContent = "Genre is required.";
             return false;
         } else {
@@ -56,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         else {
             typeError.textContent = "";
-            true;
+            return true;
         }
     }
 
@@ -64,6 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const value = summaryInput.value.trim();
         if (value === "") {
             summaryError.textContent = "Summary is required.";
+        }
+        else {
+            summaryError.textContent = "";
+            return true;
         }
     }
     startDateInput.addEventListener("blur", validateDate);
@@ -74,17 +82,14 @@ document.addEventListener("DOMContentLoaded", function () {
         radioButton.addEventListener('blur', validateType);
     });
 
-
-
     form.addEventListener("submit", function (event) {
-        const isTitleValid = validateTitle();
-        const isTypeValid = validateType();
-        const isDateValid = validateDate();
-        const isGenreValid = validateGenre();
-
-        if (!isTitleValid || !isTypeValid || !isDateValid || !isGenreValid) {
-            event.preventDefault();
-        }
-    });
-
+    let isValid = validateTitle();
+    isValid = validateDate() && isValid;
+    isValid = validateGenre() && isValid;
+    isValid = validateType() && isValid;
+    isValid = validateSummary() && isValid;
+    if (!isValid) {
+      event.preventDefault(); // stop submit
+    }
+  });
 }); 
