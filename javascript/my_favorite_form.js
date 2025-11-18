@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function validateTitle() {
         const value = titleInput.value.trim();
-        if (value.length > 50) {
+        if (value.length >= 50) {
             titleError.textContent = "No more than 50 characters allowed.";
             return false;
         }
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const value = startDateInput.value.trim();
         if (value === "") {
             dateError.textContent = "Start Date is required.";
+            return false;
         }
         else {
             dateError.textContent = "";

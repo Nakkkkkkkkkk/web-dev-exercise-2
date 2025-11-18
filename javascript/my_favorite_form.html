@@ -12,10 +12,10 @@
 <body>
     <main class="container">
         <h1>Add a New Anime</h1>
-        <form action="#" id="animeForm" method="post" class="card" novalidate> <!-- novalidate use to block html function auto required  -->
+        <form action="#" id="animeForm" method="post" class="card" > <!-- novalidate use to block html function auto required  -->
             <div class="form-row">
                 <label for="title">Title *</label>
-                <input type="text" id="title" name="title" placeholder=" e.g., Naruto" />
+                <input type="text" id="title" name="title" placeholder=" e.g., Naruto" required maxlength="50"/>
                 <span id="titleError" class="error"></span>
                 <small class="hint">Enter the official or widely known English title.</small>
             </div>
@@ -48,7 +48,7 @@
             <div class="form-row">
                 <label for="summary">Summary <span class="req">*</span></label>
                 <textarea name="summary" id="summary" rows="5" placeholder=" 1-3 Sentences about the story..."
-                    required></textarea>
+                    required maxlength="300"></textarea>
                 <small class="hint">Keep it concise (max ~ 300 characters).</small>
                 <span id="summaryError" class="error"></span>
             </div>
